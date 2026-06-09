@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beginner Writing Practice</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+padding:20px;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+h1{
+text-align:center;
+color:#0a66c2;
+}
+
+img{
+width:100%;
+border-radius:10px;
+margin:15px 0;
+}
+
+textarea{
+width:100%;
+height:120px;
+padding:10px;
+border:1px solid #ccc;
+border-radius:8px;
+box-sizing:border-box;
+}
+
+button{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#0a66c2;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#084d93;
+}
+
+.exercise{
+display:none;
+}
+
+.exercise.active{
+display:block;
+}
+
+.finish{
+display:none;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Beginner Writing Practice</h1>
+
+<div class="card">
+
+<!-- SOAL 1 -->
+<div class="exercise active" id="q1">
+<h3>Exercise 1 of 8</h3>
+<p>Write ONE sentence about the picture.</p>
+
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(1)">Next</button>
+</div>
+
+<!-- SOAL 2 -->
+<div class="exercise" id="q2">
+<h3>Exercise 2 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(2)">Next</button>
+</div>
+
+<!-- SOAL 3 -->
+<div class="exercise" id="q3">
+<h3>Exercise 3 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(3)">Next</button>
+</div>
+
+<!-- SOAL 4 -->
+<div class="exercise" id="q4">
+<h3>Exercise 4 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(4)">Next</button>
+</div>
+
+<!-- SOAL 5 -->
+<div class="exercise" id="q5">
+<h3>Exercise 5 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(5)">Next</button>
+</div>
+
+<!-- SOAL 6 -->
+<div class="exercise" id="q6">
+<h3>Exercise 6 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(6)">Next</button>
+</div>
+
+<!-- SOAL 7 -->
+<div class="exercise" id="q7">
+<h3>Exercise 7 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="next(7)">Next</button>
+</div>
+
+<!-- SOAL 8 -->
+<div class="exercise" id="q8">
+<h3>Exercise 8 of 8</h3>
+
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900">
+
+<textarea placeholder="Write your sentence here..."></textarea>
+
+<button onclick="finishExercise()">Finish</button>
+</div>
+
+<!-- HALAMAN SELESAI -->
+<div class="finish" id="finish">
+
+<h2>🎉 Congratulations!</h2>
+
+<p>
+You have completed all 8 writing exercises.
+</p>
+
+<p>
+Great job practicing your writing skills!
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function next(number){
+
+document.getElementById(
+"q"+number
+).classList.remove("active");
+
+document.getElementById(
+"q"+(number+1)
+).classList.add("active");
+
+}
+
+function finishExercise(){
+
+document.getElementById("q8")
+.classList.remove("active");
+
+document.getElementById("finish")
+.style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
